@@ -5,6 +5,8 @@ export class Person {
   }
 
   greet() {
-    console.log("Hi, my name is " + this.firstname + " " + this.lastname);
+    console.log(
+      "Hi, my name is " + this.firstname + " " + this.lastname + "!!!"
+    );
   }
 }
