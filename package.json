@@ -1,6 +1,6 @@
 {
   "name": "testing-travis-ci-deploy-to-npm",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "",
   "main": "index.js",
   "dependencies": {},
@@ -20,6 +20,5 @@
   "bugs": {
     "url": "https://github.com/third774/testing-travis-ci-deploy-to-npm/issues"
   },
-  "homepage":
-    "https://github.com/third774/testing-travis-ci-deploy-to-npm#readme"
+  "homepage": "https://github.com/third774/testing-travis-ci-deploy-to-npm#readme"
 }
