@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
+    "build": "rollup -c && cp ./package.json dist/package.json"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/third774/testing-travis-ci-deploy-to-npm/issues"
   },
-  "homepage": "https://github.com/third774/testing-travis-ci-deploy-to-npm#readme"
+  "homepage":
+    "https://github.com/third774/testing-travis-ci-deploy-to-npm#readme"
 }
