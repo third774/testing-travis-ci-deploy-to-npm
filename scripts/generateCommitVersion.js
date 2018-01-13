@@ -1,13 +1,14 @@
 const fs = require("fs");
 const path = require("path");
 
+const workingDirectory = process.env.PWD;
+
 const packageJson = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "package.json"), "utf8")
+  fs.readFileSync(path.join(workingDirectory, "package.json"), "utf8")
 );
 
 const now = new Date();
 const timeStr = now.toISOString().replace(/:|T|\.|-/g, "");
-// .slice(0, 8);
 const commitVersion = `${packageJson.version}-dev.${timeStr}.${
   process.env.TRAVIS_COMMIT
 }`;
@@ -20,13 +21,13 @@ const updatedPackageJson = {
 };
 
 fs.writeFileSync(
-  path.join(__dirname, "dist", "package.json"),
+  path.join(workingDirectory, "dist", "package.json"),
   JSON.stringify(updatedPackageJson, undefined, 2),
   "utf8"
 );
 
 fs.writeFileSync(
-  path.join(__dirname, "package.json"),
+  path.join(workingDirectory, "package.json"),
   JSON.stringify(updatedPackageJson, undefined, 2),
   "utf8"
 );
