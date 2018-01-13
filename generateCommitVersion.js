@@ -5,7 +5,10 @@ const packageJson = JSON.parse(
   fs.readFileSync(path.join(__dirname, "package.json"), "utf8")
 );
 
-const commitVersion = `${packageJson.version}-${process.env.TRAVIS_COMMIT}`;
+const now = new Date();
+const timeStr = now.toISOString().replace(/:|T|\.|-/g, "");
+// .slice(0, 8);
+const commitVersion = `${packageJson.version}-dev.${timeStr}`;
 
 console.log(commitVersion);
 
