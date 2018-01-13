@@ -5,9 +5,7 @@ const packageJson = JSON.parse(
   fs.readFileSync(path.join(__dirname, "package.json"), "utf8")
 );
 
-const commitVersion = `${packageJson.version}-at-commit-${
-  process.env.TRAVIS_COMMIT
-}`;
+const commitVersion = `${packageJson.version}-${process.env.TRAVIS_COMMIT}`;
 
 const updatedPackageJson = {
   ...packageJson,
