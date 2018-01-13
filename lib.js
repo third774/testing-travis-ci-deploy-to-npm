@@ -9,6 +9,7 @@ export class Person {
     console.log(
       "Hi, my name is " + this.firstname + " " + this.lastname + "!!!!"
     );
+    console.log("Nice to meet you!");
   }
 
   tellAge() {
