@@ -8,7 +8,9 @@ const packageJson = JSON.parse(
 const now = new Date();
 const timeStr = now.toISOString().replace(/:|T|\.|-/g, "");
 // .slice(0, 8);
-const commitVersion = `${packageJson.version}-dev.${timeStr}${$TRAVIS_COMMIT}`;
+const commitVersion = `${packageJson.version}-dev.${timeStr}${
+  process.env.TRAVIS_COMMIT
+}`;
 
 console.log(commitVersion);
 
