@@ -7,6 +7,8 @@ const packageJson = JSON.parse(
 
 const commitVersion = `${packageJson.version}-${process.env.TRAVIS_COMMIT}`;
 
+console.log(commitVersion);
+
 const updatedPackageJson = {
   ...packageJson,
   version: commitVersion
