@@ -5,7 +5,3 @@ if [ -z $TRAVIS_TAG ]; then
     node generateCommitVersion.js
     cat dist/package.json
 fi
-
-cd dist
-
-echo $PWD
