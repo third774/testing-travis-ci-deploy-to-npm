@@ -1,0 +1,21 @@
+const fs = require("fs");
+const path = require("path");
+
+const packageJson = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "package.json"), "utf8")
+);
+
+const commitVersion = `${packageJson.version}-at-commit-${
+  process.env.TRAVIS_COMMIT
+}`;
+
+const updatedPackageJson = {
+  ...packageJson,
+  version: commitVersion
+};
+
+fs.writeFileSync(
+  path.join(__dirname, "dist", "package.json"),
+  JSON.stringify(updatedPackageJson, undefined, 2),
+  "utf8"
+);
