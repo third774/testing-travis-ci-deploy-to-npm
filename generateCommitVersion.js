@@ -22,3 +22,9 @@ fs.writeFileSync(
   JSON.stringify(updatedPackageJson, undefined, 2),
   "utf8"
 );
+
+fs.writeFileSync(
+  path.join(__dirname, "package.json"),
+  JSON.stringify(updatedPackageJson, undefined, 2),
+  "utf8"
+);
