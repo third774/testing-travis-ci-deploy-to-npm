@@ -7,3 +7,5 @@ if [ -z $TRAVIS_TAG ]; then
 fi
 
 cd dist
+
+echo $PWD
